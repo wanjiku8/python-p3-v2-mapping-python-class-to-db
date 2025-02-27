@@ -1,4 +1,4 @@
-from __init__ import CURSOR, CONN  # Import CURSOR and CONN from __init__.py
+from __init__ import CURSOR, CONN 
 
 class Department:
     @classmethod
@@ -31,7 +31,7 @@ class Department:
         sql = "INSERT INTO departments (name, location) VALUES (?, ?)"
         CURSOR.execute(sql, (self.name, self.location))
         CONN.commit()
-        self.id = CURSOR.lastrowid  # Assign the auto-generated ID
+        self.id = CURSOR.lastrowid 
 
     @classmethod
     def create(cls, name, location):
